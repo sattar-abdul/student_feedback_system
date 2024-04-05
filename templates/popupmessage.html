@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Message</title>
+</head>
+<body>
+
+<!-- Display the message using JavaScript -->
+<script>
+    // Retrieve the message passed from Flask
+    var popmessage = "{{ popmessage }}";
+    var bodymessage = "{{ bodymessage }}"
+
+    // Display a popup with the message
+    alert(popmessage);
+</script>
+<h3> {{ bodymessage }} :</h3>
+ <button onclick="history.back()">Go Back</button>
+
+
+
+</body>
+</html>

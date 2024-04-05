@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block head %}
+ <h1>Adding new Student </h1>
+<h3>Enter the details of Student</h3>
+{% endblock %}
+
+{% block body %}
+    <form action="/result2", method="post">
+        <label for="roll_no">Roll No (eg: A01):</label>
+        <input type="text" id="roll_no" name="roll no"><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+{% endblock %}

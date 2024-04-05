@@ -1,0 +1,19 @@
+<!-- pro_homepage.html -->
+<h1>Welcome, {{ professor_name }}!</h1>
+<form method="POST" action="{{ url_for('result5') }}">
+  <label for="choice">Choose what to do:</label>
+  <select id="choice" name="choice">
+    <option value="Show Rating">Show Rating</option>
+    <option value="Log Out">Log Out</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+<footer>
+    <form action="/", method="post">
+        <div>
+                <a href="index.html">
+                <button>Home</button>
+                </a>
+        </div>
+    </form>
+</footer>

@@ -1,0 +1,36 @@
+<!-- show_ratings.html -->
+<h1>Professor Ratings</h1>
+<p>Professor ID: {{ professor_id }}</p>
+<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+</style>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Average Rating</th>
+  </tr>
+  {% for question, rating in average_ratings.items() %}
+    <tr>
+      <td>{{ question }}</td>
+      <td>{{ rating }}</td>
+    </tr>
+  {% endfor %}
+</table>

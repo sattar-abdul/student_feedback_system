@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block head %}
+    <h1>Adding new Professor </h1>
+    <h3>Enter the details of Professor</h3>
+{% endblock %}
+
+{% block body %}
+
+    <form action="/result3", method="post">
+        <label for="id">Unique Id:</label>
+        <input type="text" id="id" name="id"><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="dept">Department:</label>
+        <input type="text" id="dept" name="dept"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+{% endblock %}

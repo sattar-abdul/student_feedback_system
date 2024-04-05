@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% block head %}
+    <h1>Delete Student Data</h1>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Student Data:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.roll_no }}</td>
+                    <td>
+                        <form action="{{ url_for('delete_student', roll_no=student.roll_no) }}" method="post" style="display:inline;">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

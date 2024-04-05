@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block head %}
+ <h1>Editing Feedbacks</h1>
+{% endblock %}
+
+{% block body %}
+<form action="" method="post">
+        <label for="new_question">New Question:</label>
+        <input type="text" id="new_question" name="new_question" value="{{ question.question }}" required><br><br>
+        <input type="submit" value="Save">
+    </form>
+
+
+
+{% endblock %}

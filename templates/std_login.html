@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+ <h1>Welcome To Student Login Page</h1>
+
+
+{% endblock %}
+
+{% block body %}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div>
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form action="{{ url_for('std_login1') }}" method="post">
+        <label for="username">Username (Name):</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password (Roll No):</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+
+
+
+
+{% endblock %}
